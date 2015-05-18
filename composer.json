@@ -1,5 +1,5 @@
 {
-  "name": "patjnr/bootstrap-fields",
+  "name": "chitosystems/bootstrap-fields",
   "description": "Allows you to add a html and css wrapper around normal SilverStripe form fields. The fields markup will be compatible with Twitter Bootstrap.",
   "type": "silverstripe-module",
   "keywords": ["silverstripe", "bootstrap", "forms", "twitter"],

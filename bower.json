@@ -1,7 +1,7 @@
 {
-  "name": "Silverstripe Twiiter Bootstrap Fields",
-  "version": "1.0.0",
-  "homepage": "https://github.com/patjnr/bootstrap-fields",
+  "name": "Silverstripe Twitter Bootstrap Fields",
+  "version": "1.0.1",
+  "homepage": "https://github.com/chitosystems/bootstrap-fields",
   "authors": [
     "Itayi Patrick Chitovoro <patrick@chitosystems.com>"
   ],
