@@ -51,5 +51,4 @@ class BootstrapDateTimePickerField extends TextField
     {
         return $this->columnWidth;
     }
-
 }

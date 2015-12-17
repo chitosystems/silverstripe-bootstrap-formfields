@@ -6,14 +6,16 @@
  * @author Patrick Chitovoro
  * @copyright (c) 2014, Chito Systems
  */
-class BootstrapProfileImageField extends FileField {
+class BootstrapProfileImageField extends FileField
+{
 
     protected $hasFileLoaded;
     protected $member;
     protected $field_name;
     protected $fieldId;
 
-    public function __construct($name, $title = null, $value = null) {
+    public function __construct($name, $title = null, $value = null)
+    {
         $this->member = Member::currentUser();
         $this->field_name = $name;
         $fieldId = $name . 'ID';
@@ -24,12 +26,13 @@ class BootstrapProfileImageField extends FileField {
         parent::__construct($name, $title, $value);
     }
 
-    public function Field($properties = array()) {
-
+    public function Field($properties = array())
+    {
         return parent::Field($properties);
     }
 
-    function getFileLink() {
+    public function getFileLink()
+    {
         $member = $this->member;
         $field = $this->getName();
         $fieldId = $field . 'ID';
@@ -39,15 +42,16 @@ class BootstrapProfileImageField extends FileField {
         return false;
     }
 
-    function hasFile() {
+    public function hasFile()
+    {
         return $this->hasFileLoaded;
     }
 
-    function Member() {
+    public function Member()
+    {
         if ($this->member) {
             return $this->member;
         }
         return false;
     }
-
 }
