@@ -30,7 +30,9 @@ class CustomCountryDropdownField extends DropdownField
      */
     protected function locale()
     {
-        if (($member = Member::currentUser()) && $member->Locale) return $member->Locale;
+        if (($member = Member::currentUser()) && $member->Locale) {
+            return $member->Locale;
+        }
         return i18n::get_locale();
     }
 
@@ -53,8 +55,6 @@ class CustomCountryDropdownField extends DropdownField
             else {
                 asort($source);
             }
-
-
         }
 
         parent::__construct($name, ($title === null) ? $name : $title, $source, $value, $form);
