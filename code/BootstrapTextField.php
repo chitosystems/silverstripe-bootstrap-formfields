@@ -20,7 +20,7 @@ class BootstrapTextField extends TextField
      * @param null $form
      * @param null $columnWidth
      */
-    public function __construct($name, $title = null, $value = '', $columnWidth=null ,$maxLength = null, $form = null)
+    public function __construct($name, $title = null, $value = '', $columnWidth=null, $maxLength = null, $form = null)
     {
         $this->maxLength = $maxLength;
         $this->columnWidth = $columnWidth;
@@ -30,7 +30,6 @@ class BootstrapTextField extends TextField
 
     public function Field($properties = array())
     {
-
         return parent::Field($properties);
     }
 
@@ -46,5 +45,4 @@ class BootstrapTextField extends TextField
     {
         return $this->columnWidth;
     }
-
 }

@@ -24,5 +24,4 @@ class BootstrapDateField extends DateField
         $classes = array('field', 'form-control', parent::extraClasses());
         return implode(' ', $classes);
     }
-
 }
