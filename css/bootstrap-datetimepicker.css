@@ -1,0 +1,8 @@
+.bootstrap-datetimepicker-widget table, tr, td, th, tbody, thead {
+  border: none; }
+
+.bootstrap-datetimepicker-widget tr:first-child {
+  border-bottom: none;
+  border-top: 1px solid #284266 !important; }
+
+/*# sourceMappingURL=bootstrap-datetimepicker.css.map */

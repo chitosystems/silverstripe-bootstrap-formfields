@@ -11,6 +11,8 @@ class BootstrapDateTimePickerField extends TextField
 
     protected $columnWidth;
 
+    protected $time = false;
+
     /**
      * Returns an input field, class="text" and type="text" with an optional maxlength
      *
@@ -39,17 +41,33 @@ class BootstrapDateTimePickerField extends TextField
         return parent::Field($properties);
     }
 
-    protected $extraClasses = array('form-control', 'datetimepicker', 'field', 'text');
+    //  protected $extraClasses = array('form-control', 'datetimepicker', 'field', 'text');
 
-    public function extraClasses()
+    public function extraClass()
     {
-        $classes = array('field', 'datetimepicker', 'form-control', parent::extraClasses());
-        return implode(' ', $classes);
+        $aClasses = array('field', 'form-control', parent::extraClass());
+        $aClasses[] = $this->getFieldClassName();
+        return implode(' ', $aClasses);
     }
 
     public function columnWidth()
     {
         return $this->columnWidth;
+    }
+
+    public function setTimeField($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    function getFieldClassName()
+    {
+        if ($this->time) {
+            return "timepicker";
+        }
+        return "datepicker";
     }
 
 }
