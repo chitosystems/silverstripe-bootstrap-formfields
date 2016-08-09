@@ -65,9 +65,20 @@ class BootstrapDateTimePickerField extends TextField
     function getFieldClassName()
     {
         if ($this->time) {
-            return "timepicker";
+            return "timepickerfield";
         }
-        return "datepicker";
+        return "datepickerfield";
     }
 
+    function getIcon()
+    {
+        return $this->getFieldClassName() === "timepickerfield" ? "time" : "calendar";
+    }
+
+    function RequiredAttributes()
+    {
+        if ($this->Required()) {
+            return 'required="required" aria-required="true"';
+        }
+    }
 }

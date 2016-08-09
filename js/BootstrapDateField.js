@@ -11,10 +11,11 @@
     /*global jQuery, document, window*/
 
     $(document).ready(function () {
-        $("input.datepicker").datetimepicker({
+
+        $(".datepickerfield").datetimepicker({
             format: 'YYYY-MM-DD'
         });
-        $("input.timepicker").datetimepicker({
+        $(".timepickerfield").datetimepicker({
             format: 'HH:mm',
         });
     });
