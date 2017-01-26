@@ -11,8 +11,6 @@ class BootstrapDateField extends DateField
 
     public function Field($properties = array())
     {
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-        Requirements::javascript(THIRDPARTY_DIR . '/jquery-ui/jquery-ui.js');
         Requirements::javascript(BOOTSTRAPFIELDS__DIR . '/js/BootstrapDateField.js');
         return parent::Field($properties);
     }
