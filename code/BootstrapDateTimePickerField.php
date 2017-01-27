@@ -33,7 +33,7 @@ class BootstrapDateTimePickerField extends TextField
 
     public function Field($properties = array())
     {
-        Requirements::javascript(MOMENT_DIR . '/moment.js',);
+        Requirements::javascript(MOMENT_DIR . '/moment.js');
         Requirements::javascript(DATETIMEPICKER_DIR . "/js/bootstrap-datetimepicker.min.js");
         Requirements::javascript(BOOTSTRAP_FIELDS__DIR . "/js/BootstrapDateField.js");
         Requirements::css(DATETIMEPICKER_DIR . "/css/bootstrap-datetimepicker.min.css");
