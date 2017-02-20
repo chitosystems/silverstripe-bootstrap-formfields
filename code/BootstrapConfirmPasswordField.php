@@ -3,20 +3,25 @@
 /**
  * Description of BootstrapConfirmPasswordField
  *
- * @author Patrick Chitovoro
+ * @author        Patrick Chitovoro
  * @copyright (c) 2014, Chito Systems
  */
-class BootstrapConfirmPasswordField extends PasswordField {
+class BootstrapConfirmPasswordField extends CustomConfirmedPasswordField
+{
 
-    public function Field($properties = array()) {
+
+    public function Field($properties = array())
+    {
 
         return parent::Field($properties);
     }
 
-    protected $extraClasses = array('form-control');
+    protected $default_classes = array('form-control');
 
-    public function extraClasses() {
+    public function extraClasses()
+    {
         $classes = array('form-control', parent::extraClasses());
+
         return implode(' ', $classes);
     }
 

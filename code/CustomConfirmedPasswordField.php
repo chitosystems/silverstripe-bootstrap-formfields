@@ -8,7 +8,7 @@
  */
 class CustomConfirmedPasswordField extends FormField
 {
-
+    protected $default_classes = array('form-control');
     /**
      * Minimum character length of the password.
      *
@@ -86,11 +86,11 @@ class CustomConfirmedPasswordField extends FormField
 
         // naming with underscores to prevent values from actually being saved somewhere
         $this->children = new FieldList(
-            new BootstrapConfirmPasswordField(
+            new BootstrapPasswordField(
                 "{$name}[_Password]",
                 (isset($title)) ? $title : _t('Member.PASSWORD', 'Password')
             ),
-            new BootstrapConfirmPasswordField(
+            new BootstrapPasswordField(
                 "{$name}[_ConfirmPassword]",
                 (isset($titleConfirmField)) ? $titleConfirmField : _t('Member.CONFIRMPASSWORD', 'Confirm Password')
             )
