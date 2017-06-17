@@ -3,16 +3,16 @@
 /**
  * Description of BootstrapDateTimePickerField
  *
- * @author Patrick Chitovoro
+ * @author        Patrick Chitovoro
  * @copyright (c) 2015, Chito Systems
  */
 class BootstrapDateTimePickerField extends TextField
 {
-
+    
     protected $columnWidth;
-
+    
     protected $time = false;
-
+    
     /**
      * Returns an input field, class="text" and type="text" with an optional maxlength
      *
@@ -27,58 +27,76 @@ class BootstrapDateTimePickerField extends TextField
     {
         $this->maxLength = $maxLength;
         $this->columnWidth = $columnWidth;
-
+        
         parent::__construct($name, $title, $value, $form);
     }
-
+    
     public function Field($properties = array())
     {
         Requirements::javascript(MOMENT_DIR . '/moment.js');
         Requirements::javascript(DATETIMEPICKER_DIR . "/js/bootstrap-datetimepicker.min.js");
         Requirements::javascript(BOOTSTRAP_FIELDS__DIR . "/js/BootstrapDateField.js");
         Requirements::css(DATETIMEPICKER_DIR . "/css/bootstrap-datetimepicker.min.css");
-
+        
         return parent::Field($properties);
     }
-
+    
     //  protected $extraClasses = array('form-control', 'datetimepicker', 'field', 'text');
-
+    
     public function extraClass()
     {
         $aClasses = array('field', 'form-control', parent::extraClass());
         $aClasses[] = $this->getFieldClassName();
+        
         return implode(' ', $aClasses);
     }
-
+    
     public function columnWidth()
     {
         return $this->columnWidth;
     }
-
+    
     public function setTimeField($time)
     {
         $this->time = $time;
-
+        
         return $this;
     }
-
+    
     function getFieldClassName()
     {
         if ($this->time) {
             return "timepickerfield";
         }
+        
         return "datepickerfield";
     }
-
+    
     function getIcon()
     {
         return $this->getFieldClassName() === "timepickerfield" ? "time" : "calendar";
     }
-
+    
     function RequiredAttributes()
     {
         if ($this->Required()) {
             return 'required="required" aria-required="true"';
         }
     }
+    /**
+     * @param boolean $bool
+     */
+    public function setIsTime($bool) {
+        $this->time = $bool;
+        
+        return $this;
+    }
+    
+    /**
+     * @return boolean
+     */
+    public function getIsTime() {
+        return $this->time;
+    }
+   
 }
