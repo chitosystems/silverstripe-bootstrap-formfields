@@ -26,5 +26,17 @@ class BootstrapNumericField extends NumericField
 
         return implode(' ', $classes);
     }
-
+    
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getAttributes() {
+        return array_merge(
+            parent::getAttributes(),
+            array(
+                'type' => 'number',
+            )
+        );
+    }
 }
