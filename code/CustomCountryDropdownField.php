@@ -22,7 +22,7 @@ class CustomCountryDropdownField extends DropdownField
      */
     private static $default_country = 'NZ';
 
-    protected $extraClasses = array('dropdown');
+    protected $extraClasses = array('dropdown','form-control');
 
     /**
      * Get the locale of the Member, or if we're not logged in or don't have a locale, use the default one
@@ -78,4 +78,5 @@ class CustomCountryDropdownField extends DropdownField
 
         return parent::Field();
     }
+    
 }
