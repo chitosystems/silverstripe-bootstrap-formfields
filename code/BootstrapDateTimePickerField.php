@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Description of BootstrapDateTimePickerField
- *
- * @author        Patrick Chitovoro
- * @copyright (c) 2015, Chito Systems
- */
+
 class BootstrapDateTimePickerField extends TextField
 {
 
